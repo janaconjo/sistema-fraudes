@@ -1,0 +1,255 @@
+html,body,#root{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+:root {
+  --movitel-orange-main: #FF6600;
+  --movitel-orange-light: #FF9966;
+  --color-white: #FFFFFF;
+  --color-text: #333339;
+  --color-background-light: #F5F5F5;
+}
+
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-background-light); 
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+
+.auth-card {
+  display: flex;
+  width: 950px; 
+  max-width: 95%;
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+  overflow: hidden;
+
+}
+
+.auth-left {
+  flex: 1;
+
+  background: linear-gradient(135deg, var(--movitel-orange-main), var(--movitel-orange-light));
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+  text-align: center;
+  
+
+  height: 500px; 
+
+}
+
+.auth-left h1 {
+  font-size: 2.2rem;
+  margin-bottom: 5px; 
+  font-weight: 700;
+}
+
+.auth-left .subtitle { 
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.auth-left .movitel-orange {
+    color: var(--color-text); 
+    background-color: var(--color-white);
+    padding: 2px 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.auth-left img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.auth-right {
+  flex: 1;
+  padding: 40px;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  
+
+  height: 500px; 
+
+}
+
+.form-title {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: var(--movitel-orange-main); 
+}
+
+.title-separator {
+    border: 0;
+    height: 3px;
+    width: 60px;
+    background-color: var(--movitel-orange-main);
+    margin-bottom: 30px;
+    align-self: flex-start;
+}
+
+
+.toggle-mode {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--color-text);
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.toggle-button.active {
+  color: var(--movitel-orange-main);
+  border-bottom: 3px solid var(--movitel-orange-main);
+  font-weight: 700;
+}
+
+.toggle-button:hover:not(.active) {
+    color: var(--movitel-orange-light);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px; 
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--color-text);
+}
+
+.auth-form input {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background-color: var(--color-background-light);
+}
+
+.auth-form input:focus {
+  border-color: var(--movitel-orange-main);
+  box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.2); 
+  outline: none;
+  background-color: var(--color-white);
+}
+
+
+.submit-button {
+  background-color: var(--movitel-orange-main);
+  color: var(--color-white);
+  padding: 14px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.submit-button:hover {
+  background-color: var(--movitel-orange-light);
+}
+
+.submit-button:active {
+    transform: scale(0.99);
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9rem;
+}
+
+.forgot-password a {
+    color: var(--movitel-orange-main);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.forgot-password a:hover {
+    color: var(--movitel-orange-light);
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .auth-card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+ 
+  .auth-left {
+    padding: 20px;
+    order: 2; 
+    height: auto; }
+  
+  .auth-left h1 {
+      font-size: 1.8rem;
+  }
+  
+  .auth-left .subtitle {
+      font-size: 1rem;
+      margin-bottom: 15px;
+  }
+  
+  .auth-left img {
+      max-width: 150px;
+      margin-top: 15px;
+  }
+
+  .auth-right {
+    padding: 30px 20px;
+    order: 1; 
+    height: auto; 
+    min-height: 400px; 
+  }
+  
+  .form-title {
+      font-size: 1.5rem;
+  }
+}
